@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="textinput" name="textinput" value="" type="text">
+    <input id="textinput2" name="textinput2" value="" type="text2">
+
+    <select id="opc" name="opc">
+        <option value="valor1">Soma</option>
+        <option value="valor2">Subtração</option>
+        <option value="valor3">Multiplicação</option>
+        <option value="valor4">Divisão</option>
+    </select>
+
+    <label id="resultado"></label>
+
+    <button onclick="enviar()">Confirmar</button>
+
+    <script>
+
+        function enviar() {
+            var va1 = document.getElementById("textinput").value;
+            var va2 = document.getElementById("textinput2").value;
+            var opc = document.getElementById("opc").value
+
+            switch(opc){
+                case "valor1":
+                   let valorF = parseInt(va1) + parseInt(va2);
+                   alert(valorF);
+                    break;
+
+                case "valor2":
+                    let valorFS = va1 - va2;
+                    alert(valorFS);
+                    break;
+
+                case "valor3":
+                    let valorFM = va1 * va2;
+                        alert(valorFM);
+                        break;
+
+                case "valor4":
+                    let valorFSu = va1 / va2;
+                        alert(valorFSu);
+                        break;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="textinput" name="textinput" value="" type="text">
+    <button onclick="enviar()">Confirmar</button>
+
+    <script>
+        function enviar() {
+            var valor = document.getElementById("textinput").value;
+
+            for (var count = 1; count <= 10; count++) {
+                document.write(valor + " x " + count + " = " + (valor * count) + "<br />");
+            }
+        }
+    </script>
+</body>
+
+</html>
